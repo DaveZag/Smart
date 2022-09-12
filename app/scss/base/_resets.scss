@@ -1,3 +1,4 @@
+@use "../abstract/" as *;
 /* Custom resets */
 
 *,
@@ -10,8 +11,9 @@
 
 html,
 body {
-  line-height: 1.5;
   font-size: 100%;
+  font-family: $ft-lato;
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -19,15 +21,11 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-ul[role="list"],
-ol[role="list"] {
+ul,
+ol {
   list-style: none;
 }
 

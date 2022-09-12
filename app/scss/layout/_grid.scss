@@ -1,0 +1,10 @@
+@use "../abstract/" as *;
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 0.5rem;
+
+  @include breakpoint-up(small) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

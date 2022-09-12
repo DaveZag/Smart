@@ -1,0 +1,107 @@
+@use "../abstract" as *;
+
+/*............. About Section ..............*/
+
+.about {
+  min-height: 100vh;
+  .about-title {
+    color: $secondary-color;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    font-size: $medium-big;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -0.2rem;
+      bottom: 0;
+      width: 60%;
+      height: 0.2rem;
+      background-color: $last-color;
+    }
+  }
+}
+
+.about-header-title {
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-weight: normal;
+  }
+}
+
+.about-blocks {
+  text-align: center;
+  gap: 2rem;
+
+  .first-block {
+    gap: 0.5rem;
+    background-color: $secondary-color;
+    color: #fff;
+    border-radius: 10px;
+    padding: 0.5rem;
+
+    .gate {
+      font-size: $medium;
+    }
+  }
+
+  .second-block {
+    gap: 0.5rem;
+    background-color: $secondary-color;
+    color: #fff;
+    border-radius: 10px;
+    padding: 0.5rem;
+
+    .brain {
+      font-size: $medium;
+      color: $last-color;
+    }
+  }
+
+  @include breakpoint-up(small) {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+}
+
+.team {
+  h2 {
+    text-transform: uppercase;
+    margin: 3rem 0;
+  }
+}
+
+.card {
+  border-radius: 0.5rem;
+  background-color: #fff;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.3rem;
+  overflow: hidden;
+
+  .img-teacher {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: scale-down;
+  }
+}
+
+.teacher-desc {
+  width: 50%;
+  h3 {
+    color: $secondary-color;
+    font-weight: 700;
+    font-size: $medium;
+  }
+  span {
+    font-style: italic;
+    color: $last-color;
+  }
+}

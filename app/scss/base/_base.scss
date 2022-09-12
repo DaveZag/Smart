@@ -1,4 +1,17 @@
+@use "../abstract/" as *;
+
 /* Reusable classes */
+.limit {
+  padding-inline: 1rem;
+
+  @include breakpoint-up(small) {
+    padding-inline: 10%;
+  }
+}
+
+.span {
+  color: $last-color;
+}
 
 .flex {
   display: flex;

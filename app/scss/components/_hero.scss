@@ -1,0 +1,83 @@
+@use "../abstract/" as *;
+
+/*................. Hero section ................. */
+.hero {
+  background: linear-gradient(319deg, rgba(rgb(45, 45, 45), 0.4), rgba(rgb(5, 5, 5), 0.7)),
+    url("../../app/assets/pexels-junior-teixeira-2072060.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: calc(100vh - 3rem);
+
+  .hero-text {
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-title {
+    color: $last-color;
+    margin-top: -1rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero-desc {
+    font-size: $medium;
+    color: $primary-color;
+  }
+
+  .arrow {
+    stroke: #fff;
+    position: absolute;
+    width: 0.8rem;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: arrow-move 2s ease-in-out 4;
+
+    @keyframes arrow-move {
+      from {
+        bottom: 2rem;
+      }
+
+      50% {
+        bottom: 0.2rem;
+      }
+
+      to {
+        bottom: 2rem;
+      }
+    }
+  }
+
+  form {
+    display: none;
+  }
+
+  @include breakpoint-up(small) {
+    align-items: center;
+    .hero-title {
+      font-size: $biggest;
+    }
+
+    .hero-desc {
+      font-size: $medium-big;
+    }
+
+    .hero-btn {
+      display: none;
+    }
+
+    form {
+      width: auto;
+      display: inherit;
+      gap: 1rem;
+    }
+  }
+}
+
+form input {
+  width: 20rem;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+}

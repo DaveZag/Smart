@@ -4,23 +4,161 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/bc94a42a6b.js"
+      crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="dist/style.css" />
     <title>Capstone Project</title>
   </head>
   <body>
-    <!-- ================== Header ====================== -->
+    <div class="container-all">
+      <!-- ================== Header ====================== -->
 
-    <header class="">
-      <p class="logo">
-        <a href="index.html">Sm<span>art</span></a>
-      </p>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+      <header class="header-top flex flex-jc-b flex-center limit">
+        <p class="logo">
+          <a href="index.html">Sm<span class="span">art</span></a>
+        </p>
+        <nav>
+          <ul class="nav-links flex flex-jc-b">
+            <li><a class="nav-link" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="btn-container flex flex-center">
+          <span class="menu-btn"></span>
+        </div>
+      </header>
+
+      <!-- ================== Hero Section =================-->
+
+      <section class="hero flex flex-jc-c flex-col limit">
+        <div class="hero-text">
+          <header>
+            <h1 class="hero-title">Learn With Us</h1>
+          </header>
+          <p class="hero-desc">
+            We are more than a school <br />
+            We are a family
+          </p>
+        </div>
+        <form action="#" method="POST">
+          <input type="text" placeholder="user@email.com" minlength="8" required />
+          <button type="submit" class="submit-btn button">Get Started</button>
+        </form>
+        <button class="hero-btn button">Get Started</button>
+        <svg
+          class="arrow"
+          viewBox="0 0 16 132"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M7.29289 131.707C7.68341 132.098 8.31658 132.098 8.7071 131.707L15.0711 
+            125.343C15.4616 124.953 15.4616 124.319 15.0711 123.929C14.6805 
+            123.538 14.0474 123.538 13.6568 123.929L7.99999 129.586L2.34314 
+            123.929C1.95262 123.538 1.31945 123.538 0.928927 123.929C0.538402 
+            124.319 0.538402 124.953 0.928927 125.343L7.29289 131.707ZM7 -4.37114e-08L6.99999 
+            131L8.99999 131L9 4.37114e-08L7 -4.37114e-08Z"
+            fill="white"></path>
+        </svg>
+      </section>
+
+      <!-- ============== About Section ============== -->
+
+      <section class="about limit flex flex-col flex-center" id="about">
+        <h1 class="about-title">About Us</h1>
+        <header class="about-header-title">
+          <h1>We are Sm<span class="span">art</span></h1>
+          <div class="about-blocks flex flex-col">
+            <div class="first-block flex flex-col">
+              <i class="fa-solid fa-torii-gate gate"></i>
+              <h3>
+                Providing an easy acces to the best online learning materials is our first
+                duty.
+              </h3>
+            </div>
+
+            <div class="second-block flex flex-col">
+              <i class="fa-solid fa-brain brain"></i>
+              <h3>
+                At smart, we believe that all people can bring out the best of themselves
+                when provided with the rigt opportunity to aquire knowledge but also
+                implement this one.
+              </h3>
+            </div>
+          </div>
+        </header>
+
+        <div class="team flex flex-col flex-al-c">
+          <h2 class="team-title">Our Team</h2>
+          <div class="grid">
+            <div class="card flex flex-jc-c">
+              <img
+                class="img-teacher"
+                src="./app/assets/pexels-kindel-media-7688196.jpg"
+                alt="" />
+              <div class="teacher-desc">
+                <h3>Hellen Grant</h3>
+                <span> Dr. in Computer science</span>
+                <p>
+                  Known for her contributions to the national id service automation in
+                  Canada.
+                </p>
+              </div>
+            </div>
+            <div class="card flex flex-jc-c flex-al-c">
+              <img
+                class="img-teacher"
+                src="./app/assets/pexels-kindel-media-7688196.jpg"
+                alt="" />
+              <div class="teacher-desc">
+                <h3>Hellen Grant</h3>
+                <span> Dr. in Computer science</span>
+                <p>
+                  Known for her contributions to the national id service automation in
+                  Canada.
+                </p>
+              </div>
+            </div>
+            <div class="card flex flex-jc-c flex-al-c">
+              <img
+                class="img-teacher"
+                src="./app/assets/pexels-kindel-media-7688196.jpg"
+                alt="" />
+              <div class="teacher-desc">
+                <h3>Hellen Grant</h3>
+                <span> Dr. in Computer science</span>
+                <p>
+                  Known for her contributions to the national id service automation in
+                  Canada.
+                </p>
+              </div>
+            </div>
+            <div class="card flex flex-jc-c flex-al-c">
+              <img
+                class="img-teacher"
+                src="./app/assets/pexels-kindel-media-7688196.jpg"
+                alt="" />
+              <div class="teacher-desc">
+                <h3>Hellen Grant</h3>
+                <span> Dr. in Computer science</span>
+                <p>
+                  Known for her contributions to the national id service automation in
+                  Canada.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./app/script/main.js"></script>
   </body>
 </html>
