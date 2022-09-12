@@ -2,8 +2,7 @@
 
 /* ................. Hero section ................. */
 .hero {
-  background: linear-gradient(319deg, rgba(rgb(45, 45, 45), 0.4), rgba(rgb(5, 5, 5), 0.7)),
-    url("../../app/assets/pexels-junior-teixeira-2072060.jpg");
+  background: linear-gradient(319deg, rgba(rgb(45, 45, 45), 0.4), rgba(rgb(5, 5, 5), 0.7)), url("../../app/assets/pexels-junior-teixeira-2072060.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -19,6 +18,7 @@
     margin-top: -1rem;
     margin-bottom: 0.5rem;
   }
+
   .hero-desc {
     font-size: $medium;
     color: $primary-color;
@@ -54,6 +54,7 @@
 
   @include breakpoint-up(small) {
     align-items: center;
+
     .hero-title {
       font-size: $biggest;
     }

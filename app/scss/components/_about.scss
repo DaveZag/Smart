@@ -4,6 +4,7 @@
 
 .about {
   min-height: 100vh;
+
   .about-title {
     color: $secondary-color;
     margin-bottom: 3rem;
@@ -95,11 +96,13 @@
 
 .teacher-desc {
   width: 50%;
+
   h3 {
     color: $secondary-color;
     font-weight: 700;
     font-size: $medium;
   }
+
   span {
     font-style: italic;
     color: $last-color;
