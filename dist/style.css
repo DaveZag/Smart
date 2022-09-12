@@ -82,6 +82,35 @@ h1 {
   justify-content: space-between;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 0.5rem;
+}
+@media (min-width: 40em) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.button {
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  background-color: #ec5242;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 200ms ease-in-out;
+}
+.button:hover {
+  background-color: #d3d3d3;
+  cursor: pointer;
+}
+
 .container-all {
   width: 100%;
   min-height: 100vh;
@@ -156,7 +185,7 @@ h1 {
   }
 }
 
-/*................. Hero section ................. */
+/* ................. Hero section ................. */
 .hero {
   background: linear-gradient(319deg, rgba(45, 45, 45, 0.4), rgba(5, 5, 5, 0.7)), url("../../app/assets/pexels-junior-teixeira-2072060.jpg");
   background-repeat: no-repeat;
@@ -240,25 +269,7 @@ form input {
   border-radius: 20px;
 }
 
-.button {
-  outline: none;
-  border: none;
-  border-radius: 0.3rem;
-  padding: 0.5rem;
-  background-color: #ec5242;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  text-transform: uppercase;
-  font-weight: 700;
-  transition: all 200ms ease-in-out;
-}
-.button:hover {
-  background-color: #d3d3d3;
-  cursor: pointer;
-}
-
-/*............. About Section ..............*/
+/* ............. About Section .............. */
 .about {
   min-height: 100vh;
 }
@@ -353,15 +364,4 @@ form input {
 .teacher-desc span {
   font-style: italic;
   color: #ec5242;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 100%;
-  gap: 0.5rem;
-}
-@media (min-width: 40em) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }/*# sourceMappingURL=style.css.map */
