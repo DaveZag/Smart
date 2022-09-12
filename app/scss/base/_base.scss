@@ -1,0 +1,26 @@
+/* Reusable classes */
+
+.flex {
+  display: flex;
+
+  &-col {
+    flex-direction: column;
+  }
+
+  &-center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-al-c {
+    align-items: center;
+  }
+
+  &-jc-b {
+    justify-content: space-between;
+  }
+}

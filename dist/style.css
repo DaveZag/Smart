@@ -1,0 +1,69 @@
+/* Custom resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  line-height: 1.5;
+  font-size: 100%;
+}
+
+body {
+  width: 100%;
+  overflow-x: none;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Reusable classes */
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-jc-center {
+  justify-content: center;
+}
+.flex-jc-between {
+  justify-content: space-between;
+}
+.flex-al-items {
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
