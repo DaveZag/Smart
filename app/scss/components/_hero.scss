@@ -5,9 +5,9 @@
   background: linear-gradient(319deg, rgba(rgb(45, 45, 45), 0.4), rgba(rgb(5, 5, 5), 0.7)), url("../../app/assets/pexels-junior-teixeira-2072060.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position:center;
   width: 100%;
-  height: calc(100vh - 3rem);
+  height: 100vh;
 
   .hero-text {
     margin-bottom: 2.5rem;
@@ -15,7 +15,6 @@
 
   .hero-title {
     color: $last-color;
-    margin-top: -1rem;
     margin-bottom: 0.5rem;
   }
 
@@ -54,9 +53,10 @@
 
   @include breakpoint-up(small) {
     align-items: center;
+    background-attachment: fixed;
 
     .hero-title {
-      font-size: $biggest;
+      font-size: calc($biggest + 2rem);
     }
 
     .hero-desc {

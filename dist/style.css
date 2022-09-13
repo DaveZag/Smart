@@ -117,33 +117,62 @@ h1 {
   background-color: #d3d3d3;
 }
 
-/* ........... Header ............*/
+/* ........... Header ............ */
 .header-top {
   width: 100%;
   height: 3rem;
   background-color: #272a31;
+  position: fixed;
+  z-index: 2;
 }
-.header-top .nav-links {
-  display: none;
+
+.menu {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(39, 42, 49, 0.6);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  transform: translateX(100%);
+  transition: all 500ms ease-in-out;
+}
+.menu .nav-links {
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
 }
 @media (min-width: 40em) {
-  .header-top .nav-links {
+  .menu .nav-links {
     display: flex;
     gap: 2rem;
   }
 }
-.header-top .nav-links .nav-link {
+.menu .nav-links .nav-link {
   text-transform: uppercase;
   color: #fff;
   transition: all 200ms ease-in-out;
+  font-size: 2rem;
 }
-.header-top .nav-links .nav-link:hover {
+.menu .nav-links .nav-link:hover {
   color: #ec5242;
+}
+.menu-active {
+  transform: translateX(0);
 }
 
 .logo a {
   color: #fff;
   font-size: 1.5rem;
+  transition: all 200ms linear;
+}
+.logo a:hover {
+  color: #ec5242;
+}
+.logo a:hover .span {
+  color: #fff;
 }
 
 .btn-container {
@@ -151,33 +180,49 @@ h1 {
   width: -moz-fit-content;
   width: fit-content;
   height: 37%;
+  z-index: 999;
 }
 .btn-container:hover {
   cursor: pointer;
 }
 .btn-container .menu-btn {
   position: relative;
-  width: 1rem;
+  width: 1.2rem;
   height: 0.1rem;
   background-color: #fff;
+  transition: transform 500ms ease-in-out;
 }
 .btn-container .menu-btn::before {
   content: "";
   position: absolute;
   top: -0.3rem;
   left: 0;
-  width: 1rem;
+  width: 1.2rem;
   height: 0.12rem;
   background-color: #fff;
+  transition: transform 300ms ease-in-out;
 }
 .btn-container .menu-btn::after {
   content: "";
   position: absolute;
   top: 0.3rem;
   left: 0;
-  width: 1rem;
+  width: 1.2rem;
   height: 0.12rem;
   background-color: #fff;
+  transition: transform 300ms ease-in-out;
+}
+.btn-container .menu-btn-active {
+  background-color: transparent;
+  right: 0.5rem;
+  transform: rotate(360deg);
+  transition: transform 500ms ease-in-out;
+}
+.btn-container .menu-btn-active::before {
+  transform: rotate(45deg) translate(5px, 2px);
+}
+.btn-container .menu-btn-active::after {
+  transform: rotate(-45deg) translate(5px, -1px);
 }
 @media (min-width: 40em) {
   .btn-container {
@@ -192,14 +237,13 @@ h1 {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: calc(100vh - 3rem);
+  height: 100vh;
 }
 .hero .hero-text {
   margin-bottom: 2.5rem;
 }
 .hero .hero-title {
   color: #ec5242;
-  margin-top: -1rem;
   margin-bottom: 0.5rem;
 }
 .hero .hero-desc {
@@ -244,9 +288,10 @@ h1 {
 @media (min-width: 40em) {
   .hero {
     align-items: center;
+    background-attachment: fixed;
   }
   .hero .hero-title {
-    font-size: 4rem;
+    font-size: 6rem;
   }
   .hero .hero-desc {
     font-size: 2rem;
