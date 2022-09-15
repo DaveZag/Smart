@@ -848,8 +848,8 @@ h1 {
      object-fit: scale-down;
 }
 .footer-about {
-  background-color: #d3d3d3;
-  color: #ec5242;
+  background-color: #272a31 !important;
+  color: #fff;
 }
 @media (min-width: 42rem) {
   .footer {

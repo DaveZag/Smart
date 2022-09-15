@@ -20,8 +20,8 @@
   }
 
   &-about {
-    background-color: $primary-color;
-    color: $last-color;
+    background-color: $secondary-color !important;
+    color: #fff;
   }
 
   @include breakpoint-up(small) {
