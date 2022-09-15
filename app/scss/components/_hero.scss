@@ -2,7 +2,7 @@
 
 /* ................. Hero section ................. */
 .hero {
-  background: url("../../app/assets/patt.svg"), linear-gradient(190deg, rgba(3, 3, 3, 0.8), rgba(3, 3, 3, 0.8) 50%, rgba(255, 255, 255, 0.39)), url("../../app/assets/checkbox.svg"), url("../../app/assets/pexels-junior-teixeira-2072060.webp");
+  background: url("../../app/assets/pexels-junior-teixeira-2072060.webp");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 5rem, cover, 50%, cover;
   background-position: left 3% bottom 3rem, center, right 10% center, center;
@@ -67,7 +67,7 @@
   }
 
   @include breakpoint-up(small) {
-    background: url("../../app/assets/patt.svg"), linear-gradient(190deg, rgba(3, 3, 3, 0.8), rgba(3, 3, 3, 0.8) 50%, rgba(153, 152, 152, 0.39)), url("../../app/assets/checkbox.svg"), url("../../app/assets/pexels-junior-teixeira-2072060.webp");
+    background: url("../../app/assets/pexels-junior-teixeira-2072060.webp");
     background-attachment: fixed;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 5rem, cover, 50%, cover;
