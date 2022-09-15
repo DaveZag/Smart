@@ -44,8 +44,7 @@
   .nav-link {
     color: #fff;
     transition: all 200ms ease-in-out;
-    font-size: $medium + 0.2rem;
-    font-family: "cocogoose", sans-serif;
+    font-size: $medium + 0.4rem;
 
     &:hover {
       color: $last-color;
@@ -60,6 +59,7 @@
     position: static;
     display: flex;
     transform: none;
+    transition: none;
     width: 70%;
     height: auto;
     background: none;

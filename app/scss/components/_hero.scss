@@ -18,7 +18,6 @@
   background-blend-mode: darken, normal, overlay;
   width: 100%;
   height: 100vh;
-  font-family: "Cocogoose", sans-serif;
 
   .hero-text {
     margin-top: 3rem;
@@ -34,6 +33,8 @@
     color: $last-color;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
+    font-family: "Cocogoose", sans-serif;
+    font-weight: 300;
   }
 
   .hero-desc {
@@ -65,7 +66,7 @@
       }
 
       50% {
-        bottom: 0.2rem;
+        bottom: 0.3rem;
       }
 
       to {
@@ -76,17 +77,33 @@
 
   @include breakpoint-up(small) {
     background-attachment: fixed;
+    background: url("../../app/assets/patt.svg"),
+      linear-gradient(
+        190deg,
+        rgba(3, 3, 3, 0.8),
+        rgba(3, 3, 3, 0.8) 50%,
+        rgba(153, 152, 152, 0.39)
+      ),
+      url("../../app/assets/checkbox.svg"),
+      url("../../app/assets/pexels-junior-teixeira-2072060.jpg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 5rem, cover, 50%, cover;
+    background-position: left 3% bottom 3rem, center, right 10% center, center;
+    background-blend-mode: darken, normal, overlay;
 
     .hero-title {
       font-size: calc($biggest + 2rem);
     }
 
     .hero-top-desc {
-      margin-bottom: -1rem;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
     }
 
     .hero-desc {
       font-size: $medium-big;
+      padding-block: 0.5rem;
+      padding-inline: 0.2rem 9rem;
     }
 
     .hero-btn {

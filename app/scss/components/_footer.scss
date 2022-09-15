@@ -1,10 +1,12 @@
 @use "../abstract/" as *;
 
+/*............ Footer ...........*/
+
 .footer {
-  height: 20vh;
-  // gap: 0.18rem;
-  background-color: lighten($secondary-color, 20%);
-  color: $primary-color;
+  text-align: center;
+  height: 18vh;
+  background-color: #fff;
+  color: $secondary-color;
   overflow: hidden;
   padding-inline: 2rem;
 
@@ -20,5 +22,10 @@
   &-about {
     background-color: $primary-color;
     color: $last-color;
+  }
+
+  @include breakpoint-up(small) {
+    background-color: $primary-color;
+    height: 21vh;
   }
 }

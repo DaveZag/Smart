@@ -41,10 +41,6 @@
   gap: 1rem;
   width: 100%;
 
-  &:hover {
-    outline: 1px solid #fff;
-  }
-
   @include breakpoint-up(small) {
     flex-direction: row;
     gap: 1.5rem;
@@ -68,7 +64,8 @@
   backdrop-filter: blur(rem(2));
   align-items: center;
   justify-content: space-between;
-  padding: 0.7rem;
+  gap: 0.6rem;
+  padding: 0.6rem;
 
   h2 {
     color: $last-color;
@@ -78,6 +75,10 @@
   @include breakpoint-up(small) {
     flex-direction: column;
     gap: 0.5rem;
+
+    &:hover {
+      outline: 1px solid #fff;
+    }
   }
 }
 
@@ -86,6 +87,7 @@
 
   li {
     color: #fff;
+    align-self: flex-end;
   }
 }
 

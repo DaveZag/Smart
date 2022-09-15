@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Cocogoose";
-  src: url(../../app/assets/fonts/Cocogoose.ttf);
+  src: url("../../app/assets/fonts/Cocogoose Pro-trial.ttf");
 }
 /* Custom resets */
 *,
@@ -166,8 +166,7 @@ h1 {
 .menu .nav-link {
   color: #fff;
   transition: all 200ms ease-in-out;
-  font-size: 1.7rem;
-  font-family: "cocogoose", sans-serif;
+  font-size: 1.9rem;
 }
 .menu .nav-link:hover {
   color: #ec5242;
@@ -180,6 +179,7 @@ h1 {
     position: static;
     display: flex;
     transform: none;
+    transition: none;
     width: 70%;
     height: auto;
     background: none;
@@ -295,7 +295,6 @@ h1 {
   background-blend-mode: darken, normal, overlay;
   width: 100%;
   height: 100vh;
-  font-family: "Cocogoose", sans-serif;
 }
 .hero .hero-text {
   margin-top: 3rem;
@@ -309,6 +308,8 @@ h1 {
   color: #ec5242;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
+  font-family: "Cocogoose", sans-serif;
+  font-weight: 300;
 }
 .hero .hero-desc {
   padding: 0.5rem;
@@ -339,7 +340,7 @@ h1 {
     bottom: 2rem;
   }
   50% {
-    bottom: 0.2rem;
+    bottom: 0.3rem;
   }
   to {
     bottom: 2rem;
@@ -350,7 +351,7 @@ h1 {
     bottom: 2rem;
   }
   50% {
-    bottom: 0.2rem;
+    bottom: 0.3rem;
   }
   to {
     bottom: 2rem;
@@ -359,15 +360,23 @@ h1 {
 @media (min-width: 42rem) {
   .hero {
     background-attachment: fixed;
+    background: url("../../app/assets/patt.svg"), linear-gradient(190deg, rgba(3, 3, 3, 0.8), rgba(3, 3, 3, 0.8) 50%, rgba(153, 152, 152, 0.39)), url("../../app/assets/checkbox.svg"), url("../../app/assets/pexels-junior-teixeira-2072060.jpg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 5rem, cover, 50%, cover;
+    background-position: left 3% bottom 3rem, center, right 10% center, center;
+    background-blend-mode: darken, normal, overlay;
   }
   .hero .hero-title {
     font-size: 6rem;
   }
   .hero .hero-top-desc {
-    margin-bottom: -1rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
   }
   .hero .hero-desc {
     font-size: 2rem;
+    padding-block: 0.5rem;
+    padding-inline: 0.2rem 9rem;
   }
   .hero .hero-btn {
     display: none;
@@ -418,9 +427,6 @@ h1 {
   gap: 1rem;
   width: 100%;
 }
-.program-cards:hover {
-  outline: 1px solid #fff;
-}
 @media (min-width: 42rem) {
   .program-cards {
     flex-direction: row;
@@ -445,7 +451,8 @@ h1 {
           backdrop-filter: blur(rem(2));
   align-items: center;
   justify-content: space-between;
-  padding: 0.7rem;
+  gap: 0.6rem;
+  padding: 0.6rem;
 }
 .prograrm-card h2 {
   color: #ec5242;
@@ -456,6 +463,9 @@ h1 {
     flex-direction: column;
     gap: 0.5rem;
   }
+  .prograrm-card:hover {
+    outline: 1px solid #fff;
+  }
 }
 
 .text {
@@ -463,6 +473,7 @@ h1 {
 }
 .text li {
   color: #fff;
+  align-self: flex-end;
 }
 
 .programBtn {
@@ -605,13 +616,18 @@ h1 {
   background-color: #d3d3d3;
   width: 100%;
   min-height: 100vh;
+  text-align: center;
 }
 
 .hero-about {
   text-align: center;
-  padding-top: 5rem;
+  padding-top: 9.5rem;
+  padding-bottom: 2rem;
   min-height: 100vh;
-  background: url(../../app/assets/Ellipse.svg) no-repeat center left/3rem;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1)), url(../../app/assets/Ellipse.svg), url(../../app/assets/Ellipse.svg), url(../../app/assets/patt.svg);
+  background-repeat: no-repeat;
+  background-position: center, bottom 58% left, right top 85%, top 28% right;
+  background-size: 100%, 3rem, 7rem, 4rem;
 }
 .hero-about .hero-about-desc {
   color: #ec5242;
@@ -619,14 +635,189 @@ h1 {
 }
 .hero-about .hero-about-title {
   color: #ec5242;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.9rem;
   text-transform: uppercase;
+  font-family: "Cocogoose", sans-serif;
+  font-weight: 500;
+}
+@media (min-width: 42rem) {
+  .hero-about {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)), url(../../app/assets/Ellipse.svg), url(../../app/assets/Ellipse.svg), url(../../app/assets/patt.svg), url(../../app/assets/rpi_vector.svg), url(../../app/assets/checkbox.svg);
+    background-repeat: no-repeat;
+    background-position: center, bottom 58% left 9rem, right 18rem top 78%, top 28% right 90rem, top 20% center, top 80% center;
+    background-size: 100%, 6rem, 7rem, 4rem, 6rem, 14rem;
+    background-attachment: fixed;
+  }
+  .hero-about .hero-about-desc {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+  }
+  .hero-about .hero-about-title {
+    font-size: 4.5rem;
+  }
 }
 
+.about-desc {
+  margin-top: 1.7rem;
+  color: #272a31;
+}
+.about-desc .first {
+  background-color: #fff;
+  outline: 0.125rem solid #bababa;
+  line-height: 1.5;
+  padding: 1rem;
+  color: #272a31;
+}
+.about-desc .second {
+  margin-top: 3rem;
+}
+.about-desc a {
+  color: #0f0f0f;
+  font-weight: 700;
+  position: relative;
+}
+.about-desc a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.01rem;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #0f0f0f;
+}
+@media (min-width: 42rem) {
+  .about-desc .first {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .about-desc .first,
+.about-desc .second {
+    font-size: 1.2rem;
+  }
+}
+
+.logo-about {
+  background-color: #fff;
+  padding-block: 4rem 2rem;
+}
+
+.logo-header {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.logo-header h1 {
+  font-size: 1.5rem;
+}
+.logo-header::after {
+  content: "";
+  position: absolute;
+  bottom: -0.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15%;
+  height: 0.1rem;
+  background: linear-gradient(to right, #272a31, #ec5242);
+}
+
+.logo-desc p {
+  margin-bottom: 1rem;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+  outline: 0.11875rem solid #dbdde2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-img img {
+  width: 100%;
+  height: 14rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 42rem) {
+  .logo-img img {
+    width: 100%;
+    height: 18rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.hr-line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #bec2cc;
+}
+
+.past {
+  padding-block: 3rem 2rem;
+  background-color: #fff;
+}
+.past h1 {
+  font-size: 1.5rem;
+}
+
+.past-header {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.past-header::after {
+  content: "";
+  position: absolute;
+  bottom: -0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45%;
+  height: 0.1rem;
+  background: linear-gradient(to right, #272a31, #ec5242);
+}
+
+.past-img {
+  width: 100%;
+  color: #fff;
+  font-size: 1.5rem;
+  gap: 1rem;
+}
+.past-img .image-one {
+  background: linear-gradient(rgba(135, 83, 83, 0.798), rgba(25, 23, 23, 0.611)), url(../../app/assets/Workshop1.jpg) no-repeat center;
+  background-size: cover;
+  height: 10rem;
+  width: 100%;
+}
+.past-img .image-two {
+  background: linear-gradient(rgba(135, 83, 83, 0.798), rgba(25, 23, 23, 0.611)), url(../../app/assets/Workshop2.jpg) no-repeat center;
+  background-size: cover;
+  height: 10rem;
+  width: 100%;
+}
+@media (min-width: 42rem) {
+  .past-img {
+    flex-direction: row;
+    height: 20rem;
+  }
+  .past-img .image-one,
+.past-img .image-two {
+    height: 100%;
+    transition: all 300ms ease-in-out;
+    box-shadow: 4px 3px 10px rgba(0, 0, 0, 0.231);
+    border-radius: 2px;
+  }
+  .past-img .image-one:hover,
+.past-img .image-two:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+  }
+}
+
+/*............ Footer ...........*/
 .footer {
-  height: 20vh;
-  background-color: #545b6a;
-  color: #d3d3d3;
+  text-align: center;
+  height: 18vh;
+  background-color: #fff;
+  color: #272a31;
   overflow: hidden;
   padding-inline: 2rem;
 }
@@ -641,4 +832,10 @@ h1 {
 .footer-about {
   background-color: #d3d3d3;
   color: #ec5242;
+}
+@media (min-width: 42rem) {
+  .footer {
+    background-color: #d3d3d3;
+    height: 21vh;
+  }
 }/*# sourceMappingURL=style.css.map */
