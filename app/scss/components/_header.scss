@@ -63,6 +63,7 @@
     width: 70%;
     height: auto;
     background: none;
+
     &::after {
       display: none;
     }
@@ -79,6 +80,7 @@
 
     li:last-child {
       transition: transform 300ms ease-in-out;
+
       &:hover {
         transform: scale(1.05);
       }
@@ -142,7 +144,7 @@
       width: 1.2rem;
       height: 0.2rem;
       background-color: $secondary-color;
-      transition: transform 600ms ease-in-out;
+      transition: all 600ms ease-in-out;
     }
 
     &::after {
@@ -153,7 +155,7 @@
       width: 1.2rem;
       height: 0.2rem;
       background-color: $secondary-color;
-      transition: transform 600ms ease-in-out;
+      transition: all 600ms ease-in-out;
     }
 
     &-active {
@@ -164,10 +166,12 @@
 
       &::before {
         transform: rotate(45deg) translate(5px, 3px);
+        background-color: lighten($secondary-color, 100%);
       }
 
       &::after {
         transform: rotate(-45deg) translate(5px, -3px);
+        background-color: lighten($secondary-color, 100%);
       }
     }
   }

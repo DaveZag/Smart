@@ -37,42 +37,42 @@ const cardClasses = ['card flex flex-jc-c', 'img-teacher', 'teacher-desc', 'line
 
 const members = [
   {
-    img: './app/assets/person1.jpg',
+    img: './app/assets/person1.webp',
     imgAlt: 'Picture of a professor',
     name: 'Scott Charles',
     title: 'Software Engineer',
     desc: 'Worked with other programmers to develop Kiyu the best online tranding platfom in 2017.',
   },
   {
-    img: './app/assets/person2.jpg',
+    img: './app/assets/person2.webp',
     imgAlt: 'Picture of a professor',
     name: 'Jessica DeGaule',
     title: 'UX&UI expert',
     desc: 'Has over 100 professional deployed websites templates.',
   },
   {
-    img: './app/assets/person3.jpg',
+    img: './app/assets/person3.webp',
     imgAlt: 'Picture of a professor',
     name: 'Sergio Gust',
     title: 'Senior Program Manager and Full Stack Developper',
     desc: 'Known for his contributions to the national id service automation in Canada.',
   },
   {
-    img: './app/assets/person4.jpg',
+    img: './app/assets/person4.webp',
     imgAlt: 'Picture of a professor',
     name: 'Jake Wisler',
     title: 'fullstack Python Developper',
     desc: 'Known for her contributions to the national id service automation in Canada.',
   },
   {
-    img: './app/assets/person5.jpg',
+    img: './app/assets/person5.webp',
     imgAlt: 'Picture of a professor',
     name: 'Charles Texas',
     title: 'Dr. in Computer Science and Senior Editor',
     desc: 'Has over 100 contributions to frameworks from React to Django and many more.',
   },
   {
-    img: './app/assets/person6.jpg',
+    img: './app/assets/person6.webp',
     imgAlt: 'Picture of a professor',
     name: 'Hellen Grant',
     title: 'Dr. in Computer science and Lead Software Engineer',

@@ -15,9 +15,7 @@
   padding-top: 9.5rem;
   padding-bottom: 2rem;
   min-height: 100vh;
-  background: linear-gradient(to right, rgba(rgb(255, 255, 255), 0.2), rgba(black, 0.1)),
-    url(../../app/assets/Ellipse.svg), url(../../app/assets/Ellipse.svg),
-    url(../../app/assets/patt.svg);
+  background: linear-gradient(to right, rgba(rgb(255, 255, 255), 0.2), rgba(black, 0.1)), url(../../app/assets/Ellipse.svg), url(../../app/assets/Ellipse.svg), url(../../app/assets/patt.svg);
   background-repeat: no-repeat;
   background-position: center, bottom 58% left, right top 85%, top 28% right;
   background-size: 100%, 3rem, 7rem, 4rem;
@@ -36,13 +34,9 @@
   }
 
   @include breakpoint-up(small) {
-    background: linear-gradient(to right, rgba(rgb(255, 255, 255), 0.2), rgba(black, 0.2)),
-      url(../../app/assets/Ellipse.svg), url(../../app/assets/Ellipse.svg),
-      url(../../app/assets/patt.svg), url(../../app/assets/rpi_vector.svg),
-      url(../../app/assets/checkbox.svg);
+    background: linear-gradient(to right, rgba(rgb(255, 255, 255), 0.2), rgba(black, 0.2)), url(../../app/assets/Ellipse.svg), url(../../app/assets/Ellipse.svg), url(../../app/assets/patt.svg), url(../../app/assets/rpi_vector.svg), url(../../app/assets/checkbox.svg);
     background-repeat: no-repeat;
-    background-position: center, bottom 58% left 9rem, right 18rem top 78%,
-      top 28% right 90rem, top 20% center, top 80% center;
+    background-position: center, bottom 58% left 9rem, right 18rem top 78%, top 28% right 90rem, top 20% center, top 80% center;
     background-size: 100%, 6rem, 7rem, 4rem, 6rem, 14rem;
     background-attachment: fixed;
 
@@ -196,16 +190,14 @@
   gap: 1rem;
 
   .image-one {
-    background: linear-gradient(rgba(135, 83, 83, 0.798), rgba(25, 23, 23, 0.611)),
-      url(../../app/assets/Workshop1.jpg) no-repeat center;
+    background: linear-gradient(rgba(135, 83, 83, 0.798), rgba(25, 23, 23, 0.611)), url(../../app/assets/Workshop1.webp) no-repeat center;
     background-size: cover;
     height: 10rem;
     width: 100%;
   }
 
   .image-two {
-    background: linear-gradient(rgba(135, 83, 83, 0.798), rgba(25, 23, 23, 0.611)),
-      url(../../app/assets/Workshop2.jpg) no-repeat center;
+    background: linear-gradient(rgba(135, 83, 83, 0.798), rgba(25, 23, 23, 0.611)), url(../../app/assets/Workshop2.webp) no-repeat center;
     background-size: cover;
     height: 10rem;
     width: 100%;

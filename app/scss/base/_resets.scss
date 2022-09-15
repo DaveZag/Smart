@@ -8,13 +8,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  // outline: 1px solid red;
 }
 
 html,
 body {
   font-size: 100%;
-  font-family: $ft-lato;
+  font-family: $ft-lato, "Arial", sans-serif;
   scroll-behavior: smooth !important;
 }
 

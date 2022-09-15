@@ -72,11 +72,15 @@
     height: 11rem;
     object-fit: cover;
     z-index: 9;
+    margin: 0;
   }
 }
 
 .teacher-desc {
   width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
 
   h3 {
     color: $secondary-color;
@@ -87,6 +91,13 @@
   span {
     font-style: italic;
     color: $last-color;
+  }
+
+  .line {
+    width: 2.5rem;
+    height: 0.1rem;
+    background-color: lighten($secondary-color, 50%);
+    margin: 0.5rem 0;
   }
 }
 
@@ -117,6 +128,11 @@
     height: 0.1rem;
     background: linear-gradient(to right, $last-color, $primary-color);
   }
+}
+
+.partner {
+  width: auto;
+  height: auto;
 }
 
 .list-grid {
