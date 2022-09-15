@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./app/assets/head.png" type="image/x-icon" />
     <script
       src="https://kit.fontawesome.com/bc94a42a6b.js"
       crossorigin="anonymous"></script>
@@ -12,22 +13,27 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       rel="stylesheet" />
+
     <link rel="stylesheet" href="dist/style.css" />
-    <title>Capstone Project</title>
+    <title>Smart | Home</title>
   </head>
   <body>
     <div class="container-all">
       <!-- ================== Header ====================== -->
 
       <header class="header-top flex flex-jc-b flex-center limit">
-        <p class="logo">
+        <p class="logo flex flex-center">
+          <img src="./app/assets/head.svg" alt="" />
           <a href="index.html">Sm<span class="span">art</span></a>
         </p>
         <nav class="menu flex flex-al-c flex-jc-c">
           <ul class="nav-links flex flex-jc-b">
-            <li><a class="nav-link" href="#home">Home</a></li>
-            <li><a class="nav-link" href="#about">About</a></li>
-            <li><a class="nav-link" href="#contact">Contact</a></li>
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="about.html">About</a></li>
+            <li><a class="nav-link" href="#program">Program</a></li>
+            <li><a class="nav-link" href="#join">Join</a></li>
+            <li><a class="nav-link" href="#sponsor">Sponsor</a></li>
+            <li><a class="nav-link contact" href="#contact">Contact</a></li>
           </ul>
         </nav>
 
@@ -36,127 +42,135 @@
         </div>
       </header>
 
-      <!-- ================== Hero Section =================-->
+      <main>
+        <!-- ================== Hero Section =================-->
 
-      <section class="hero flex flex-jc-c flex-col limit">
-        <div class="hero-text">
-          <header>
-            <h1 class="hero-title">Learn With Us</h1>
+        <section class="hero flex flex-jc-c flex-col limit">
+          <div class="hero-text">
+            <header>
+              <p class="hero-top-desc">"Sharing our passion for learning with you."</p>
+              <h1 class="hero-title">Learn With Us</h1>
+            </header>
+            <p class="hero-desc">
+              We are more than a school <br />
+              We are a family.
+              <span>Next class starting next month</span>
+            </p>
+          </div>
+          <svg
+            class="arrow"
+            viewBox="0 0 16 132"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7.29289 131.707C7.68341 132.098 8.31658 132.098 8.7071 131.707L15.0711 
+              125.343C15.4616 124.953 15.4616 124.319 15.0711 123.929C14.6805 
+              123.538 14.0474 123.538 13.6568 123.929L7.99999 129.586L2.34314 
+              123.929C1.95262 123.538 1.31945 123.538 0.928927 123.929C0.538402 
+              124.319 0.538402 124.953 0.928927 125.343L7.29289 131.707ZM7 -4.37114e-08L6.99999 
+              131L8.99999 131L9 4.37114e-08L7 -4.37114e-08Z"
+              fill="white"></path>
+          </svg>
+        </section>
+
+        <!-- ================ Main Program =================== -->
+
+        <section class="program limit flex flex-col flex-center" id="program">
+          <header class="program-header">
+            <h1>Main Program</h1>
           </header>
-          <p class="hero-desc">
-            We are more than a school <br />
-            We are a family
-          </p>
-        </div>
-        <form action="#" method="POST">
-          <input type="text" placeholder="user@email.com" minlength="8" required />
-          <button type="submit" class="submit-btn button">Get Started</button>
-        </form>
-        <button type="button" class="hero-btn button">Get Started</button>
-        <svg
-          class="arrow"
-          viewBox="0 0 16 132"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M7.29289 131.707C7.68341 132.098 8.31658 132.098 8.7071 131.707L15.0711 
-            125.343C15.4616 124.953 15.4616 124.319 15.0711 123.929C14.6805 
-            123.538 14.0474 123.538 13.6568 123.929L7.99999 129.586L2.34314 
-            123.929C1.95262 123.538 1.31945 123.538 0.928927 123.929C0.538402 
-            124.319 0.538402 124.953 0.928927 125.343L7.29289 131.707ZM7 -4.37114e-08L6.99999 
-            131L8.99999 131L9 4.37114e-08L7 -4.37114e-08Z"
-            fill="white"></path>
-        </svg>
-      </section>
-
-      <!-- ============== About Section ============== -->
-
-      <section class="about limit flex flex-col flex-center" id="about">
-        <h1 class="about-title">About Us</h1>
-        <header class="about-header-title">
-          <h1>We are <span class="span">Smart</span></h1>
-          <div class="about-blocks flex flex-col">
-            <div class="first-block flex flex-col">
-              <i class="fa-solid fa-torii-gate gate"></i>
-              <h3>
-                Providing an easy acces to the best online learning materials is our first
-                duty.
-              </h3>
-            </div>
-
-            <div class="second-block flex flex-col">
-              <i class="fa-solid fa-brain brain"></i>
-              <h3>
-                At smart, we believe that all people can bring out the best of themselves
-                when provided with the rigt opportunity to aquire knowledge but also
-                implement this one.
-              </h3>
-            </div>
-          </div>
-        </header>
-
-        <div class="team flex flex-col flex-al-c">
-          <h2 class="team-title">Our Team</h2>
-          <div class="grid">
-            <div class="card flex flex-jc-c">
-              <img
-                class="img-teacher"
-                src="./app/assets/pexels-kindel-media-7688196.jpg"
-                alt="" />
-              <div class="teacher-desc">
-                <h3>Hellen Grant</h3>
-                <span> Dr. in Computer science</span>
-                <p>
-                  Known for her contributions to the national id service automation in
-                  Canada.
-                </p>
+          <div class="program-cards flex flex-col">
+            <div class="prograrm-card flex">
+              <div class="icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h2>Languages</h2>
+              <div class="text">
+                <ul class="list">
+                  <li>Html, Css and Javascript</li>
+                  <li>Python</li>
+                  <li>Ruby</li>
+                  <li>SQL</li>
+                </ul>
               </div>
             </div>
-            <div class="card flex flex-jc-c flex-al-c">
-              <img
-                class="img-teacher"
-                src="./app/assets/pexels-kindel-media-7688196.jpg"
-                alt="" />
-              <div class="teacher-desc">
-                <h3>Hellen Grant</h3>
-                <span> Dr. in Computer science</span>
-                <p>
-                  Known for her contributions to the national id service automation in
-                  Canada.
-                </p>
+
+            <div class="prograrm-card flex">
+              <div class="icon">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h2>Frameworks</h2>
+              <div class="text">
+                <ul class="list">
+                  <li>Angular.js</li>
+                  <li>React.js</li>
+                  <li>Ruby on rails</li>
+                  <li>Django</li>
+                </ul>
               </div>
             </div>
-            <div class="card flex flex-jc-c flex-al-c">
-              <img
-                class="img-teacher"
-                src="./app/assets/pexels-kindel-media-7688196.jpg"
-                alt="" />
-              <div class="teacher-desc">
-                <h3>Hellen Grant</h3>
-                <span> Dr. in Computer science</span>
-                <p>
-                  Known for her contributions to the national id service automation in
-                  Canada.
-                </p>
+
+            <div class="prograrm-card flex">
+              <div class="icon">
+                <i class="fa-solid fa-person-digging"></i>
               </div>
-            </div>
-            <div class="card flex flex-jc-c flex-al-c">
-              <img
-                class="img-teacher"
-                src="./app/assets/pexels-kindel-media-7688196.jpg"
-                alt="" />
-              <div class="teacher-desc">
-                <h3>Hellen Grant</h3>
-                <span> Dr. in Computer science</span>
+              <h2>Workshops</h2>
+              <div class="text">
                 <p>
-                  Known for her contributions to the national id service automation in
-                  Canada.
+                  Practice all acquired knowledge by building multiple web application and
+                  thus fuel your portofolio for future needs.
                 </p>
               </div>
             </div>
           </div>
+          <a href="#" class="programBtn button">Join Smart Today</a>
+        </section>
+
+        <!-- =====================Team Section ====================== -->
+
+        <section class="team-container flex flex-col flex-center">
+          <header class="team-header">
+            <h2 class="team-title">Our Team</h2>
+          </header>
+          <div class="team flex flex-col flex-al-c limit" id="team">
+            <div class="grid"></div>
+          </div>
+        </section>
+
+        <section class="partners limit flex flex-col flex-center">
+          <header class="partners-header">
+            <h1>Parters</h1>
+          </header>
+          <ul class="partner-list list-grid">
+            <li>
+              <img class="partner" src="./app/assets/google.svg" alt="Google logo" />
+            </li>
+            <li>
+              <img class="partner" src="./app/assets/oracle.svg" alt="Oracle Logo" />
+            </li>
+            <li>
+              <img class="partner" src="./app/assets/google.svg" alt="Google Logo" />
+            </li>
+            <li>
+              <img class="partner" src="./app/assets/workday.svg" alt="workday Logo" />
+            </li>
+            <li>
+              <img class="partner" src="./app/assets/google.svg" alt="Google Logo" />
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <!-- ============== Footer ================== -->
+
+      <footer class="footer flex flex-center">
+        <div class="footer-image flex">
+          <img
+            src="./app/assets/Elegant_Circle_Photography_Logo-removebg-preview.png"
+            alt="smart Logo" />
         </div>
-      </section>
+        <div class="footer-text">Copyrigth &copy; <span id="date"></span> Smart</div>
+      </footer>
     </div>
 
     <script src="./app/script/main.js"></script>

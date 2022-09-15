@@ -1,0 +1,24 @@
+@use "../abstract/" as *;
+
+.footer {
+  height: 20vh;
+  // gap: 0.18rem;
+  background-color: lighten($secondary-color, 20%);
+  color: $primary-color;
+  overflow: hidden;
+  padding-inline: 2rem;
+
+  .footer-image {
+    width: 10rem;
+    height: 10rem;
+
+    img {
+      object-fit: scale-down;
+    }
+  }
+
+  &-about {
+    background-color: $primary-color;
+    color: $last-color;
+  }
+}

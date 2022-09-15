@@ -1,0 +1,94 @@
+@use "../abstract/" as *;
+
+/* ................ Program Section ................... */
+
+.program {
+  padding-block: 5rem;
+  background: url("../../app/assets/deco_bg.png"), #272a31;
+  background-size: 2rem;
+  color: #fff;
+  font-weight: normal;
+
+  h1 {
+    font-size: $medium;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+
+  @include breakpoint-up(small) {
+    text-align: center;
+  }
+}
+
+.program-header {
+  position: relative;
+  margin-bottom: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 0.1rem;
+    background: linear-gradient(to right, $last-color, $primary-color);
+  }
+}
+
+.program-cards {
+  gap: 1rem;
+  width: 100%;
+
+  &:hover {
+    outline: 1px solid #fff;
+  }
+
+  @include breakpoint-up(small) {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+.icon {
+  i {
+    color: #fff;
+    font-size: 2rem;
+
+    @include breakpoint-up(small) {
+      font-size: 3rem;
+    }
+  }
+}
+
+.prograrm-card {
+  width: 100%;
+  background-color: rgba($primary-color, 0.1);
+  backdrop-filter: blur(rem(2));
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem;
+
+  h2 {
+    color: $last-color;
+    font-size: $small + 0.2rem;
+  }
+
+  @include breakpoint-up(small) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.text {
+  width: 90%;
+
+  li {
+    color: #fff;
+  }
+}
+
+.programBtn {
+  margin-top: 1.5rem;
+}
