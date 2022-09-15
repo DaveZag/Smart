@@ -1,7 +1,7 @@
 
-# Project Name: Online Coding School
+# Project Name: Smart Online Coding School
 
->**Smart online coding is a platform that provides student from all around the world an opportunity to learn coding without having to worry distance, Fees and other hinders that can easily be found in tradition school systems.(This is A capstone project done at Microverse).**
+>**Smart is a platform that provides student from all around the world an opportunity to learn coding without having to worry distance, Fees and other hinders that can easily be found in tradition school systems.(This is A capstone project done at Microverse).**
 
 ## Built With
 
@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-[**See Project 🚀**](https://davezag.github.io/Connect-landing-page/)
+[**See Project 🚀**](https://davezag.github.io/Smart-Online-school-capstone-project/)
 
 <!-- 
 ## Video Demonstration
@@ -40,7 +40,7 @@ To get a local copy up and running follow these simple example steps.
 
 - Here is a command to clone this project
 
-  `git clone https://github.com/skyv26/raspbian-community-conference.git`
+  `git clone https://github.com/DaveZag/Smart-Online-school-capstone-project.git`
 
 Once clone on your computer, open the folder then open the index.html file in your browser. If you opened the folder in vscode or another Code Editor, look for the extesion __"live server"__; install it then click on Go Live at the bottom right of you vscode editor and voila.
 
@@ -50,7 +50,7 @@ Once clone on your computer, open the folder then open the index.html file in yo
 
 ## Repo Links
 
-- Repository: [Smart](https://github.com/DaveZag/Connect-landing-page)
+- Repository: [Smart](https://github.com/DaveZag/Smart-Online-school-capstone-project)
 
 ## Socials
 
