@@ -1,4 +1,3 @@
-/* eslint linebreak-style: ["error", "windows"] */
 const arrow = document.querySelector('.arrow');
 const menuBtn = document.querySelector('.menu-btn');
 const navMenu = document.querySelector('.menu');
