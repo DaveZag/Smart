@@ -1,0 +1,22 @@
+@use "../abstract/" as *;
+
+.button {
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 1rem 2rem;
+  background-color: $last-color;
+  width: fit-content;
+  font-weight: 700;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    background-color: $primary-color;
+    color: $last-color;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 1px solid #fff;
+  }
+}

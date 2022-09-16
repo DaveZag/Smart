@@ -1,0 +1,31 @@
+@use "../abstract/" as *;
+
+/* ............ Footer ........... */
+
+.footer {
+  text-align: center;
+  height: 18vh;
+  background-color: #fff;
+  color: $secondary-color;
+  overflow: hidden;
+  padding-inline: 2rem;
+
+  .footer-image {
+    width: 10rem;
+    height: 10rem;
+
+    img {
+      object-fit: scale-down;
+    }
+  }
+
+  &-about {
+    background-color: $secondary-color !important;
+    color: #fff;
+  }
+
+  @include breakpoint-up(small) {
+    background-color: $primary-color;
+    height: 21vh;
+  }
+}

@@ -1,0 +1,137 @@
+@use "../abstract/" as *;
+
+/* ................ Program Section ................... */
+
+.program {
+  padding-block: 5rem;
+  background: url("../../app/assets/deco_bg.png"), #272a31;
+  background-size: 2rem;
+  color: #fff;
+  font-weight: normal;
+
+  h2 {
+    font-size: $medium;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+
+  @include breakpoint-up(small) {
+    text-align: center;
+    min-height: 100vh;
+  }
+}
+
+.program-header {
+  position: relative;
+  margin-bottom: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 0.1rem;
+    background: linear-gradient(to right, $last-color, $primary-color);
+  }
+
+  @include breakpoint-up(small) {
+    margin-bottom: 3rem;
+  }
+}
+
+.program-cards {
+  gap: 1rem;
+  width: 100%;
+
+  @include breakpoint-up(small) {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+.icon {
+  i {
+    color: #fff;
+    font-size: 2rem;
+
+    @include breakpoint-up(small) {
+      font-size: 3rem;
+    }
+  }
+}
+
+.prograrm-card {
+  width: 100%;
+  background-color: rgba($primary-color, 0.1);
+  backdrop-filter: blur(rem(2));
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.6rem;
+
+  h3 {
+    color: $last-color;
+    font-size: $small + 0.2rem;
+  }
+
+  @include breakpoint-up(small) {
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &:hover {
+      outline: 1px solid #fff;
+    }
+  }
+}
+
+.text {
+  width: 90%;
+
+  li {
+    color: #fff;
+    align-self: flex-end;
+  }
+}
+
+.programBtn {
+  margin-top: 1.5rem;
+
+  @include breakpoint-up(small) {
+    display: none;
+  }
+}
+
+.seeAll {
+  display: none;
+
+  @include breakpoint-up(small) {
+    font-size: $normal + 0.2rem;
+    display: block;
+    margin-top: 5rem;
+    color: #fff;
+    position: relative;
+    transition: all 100ms ease-in-out;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -0.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120%;
+      height: 0.1rem;
+      background-color: #fff;
+    }
+
+    &:hover {
+      color: $last-color;
+
+      &::after {
+        background-color: $last-color;
+      }
+    }
+  }
+}

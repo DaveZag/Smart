@@ -1,0 +1,43 @@
+@use "../abstract/" as *;
+
+/* Reusable classes */
+.limit {
+  padding-inline: 1rem;
+
+  @include breakpoint-up(small) {
+    padding-inline: 10%;
+  }
+}
+
+.span {
+  color: $last-color;
+}
+
+.flex {
+  display: flex;
+
+  &-col {
+    flex-direction: column;
+  }
+
+  &-center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-al-c {
+    align-items: center;
+  }
+
+  &-jc-b {
+    justify-content: space-between;
+  }
+}
+
+.active {
+  color: $last-color !important;
+}

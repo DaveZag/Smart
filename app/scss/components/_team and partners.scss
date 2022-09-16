@@ -1,0 +1,208 @@
+@use "../abstract" as *;
+@use "../util/" as *;
+
+/* .............. Team Section............... */
+
+.team-container {
+  @include breakpoint-up(small) {
+    padding-top: 3.5rem;
+  }
+}
+
+.team {
+  background-color: #fff;
+  margin-top: 2rem;
+  max-height: 69.5vh;
+  padding-bottom: 3rem;
+  overflow: hidden;
+  transition: max-height 100ms ease-in;
+
+  @include breakpoint-up(small) {
+    max-height: none !important;
+    height: auto !important;
+  }
+}
+
+.team-header {
+  position: relative;
+
+  h2 {
+    color: $secondary-color;
+    margin: 1rem auto;
+    font-weight: normal;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 0.1rem;
+    background: linear-gradient(to right, $last-color, $primary-color);
+  }
+}
+
+.card {
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.3rem;
+  margin-block: 1rem;
+
+  &-active {
+    .card:nth-last-child(-n + 3) {
+      background-color: red;
+    }
+  }
+
+  @include breakpoint-up(small) {
+    margin-block: 2rem;
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  align-items: flex-start;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -2.5rem;
+    left: -2rem;
+    width: 8rem;
+    height: 8rem;
+    background-image: url("../../app/assets/checkbox.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(45deg);
+
+    @include breakpoint-up(small) {
+      top: -2.5rem;
+      left: -2.5em;
+    }
+  }
+
+  .img-teacher {
+    width: 10rem;
+    height: 11rem;
+    object-fit: cover;
+    z-index: 9;
+    margin: 0;
+  }
+}
+
+.teacher-desc {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+
+  h3 {
+    color: $secondary-color;
+    font-weight: 700;
+    font-size: $medium;
+  }
+
+  span {
+    font-style: italic;
+    color: $last-color;
+  }
+
+  .line {
+    width: 2.5rem;
+    height: 0.1rem;
+    background-color: lighten($secondary-color, 50%);
+    margin: 0.5rem 0;
+  }
+}
+
+.hideBtn {
+  padding: 0.5rem 4rem;
+  margin: 0 auto 2rem;
+  background-color: #fff;
+  border: none;
+  outline: 1px solid $secondary-color;
+  position: relative;
+
+  &::after {
+    content: ">";
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    font-size: $medium;
+    transform: var(--transform, translateY(-50%) rotate(90deg));
+    color: $last-color;
+  }
+
+  &:active {
+    background-color: $last-color;
+    color: #fff !important;
+    cursor: pointer;
+
+    &::after {
+      color: #fff;
+    }
+  }
+
+  @include breakpoint-up(small) {
+    display: none;
+  }
+}
+
+/* ............. Partners Section ............... */
+
+.partners {
+  background-color: $secondary-color;
+  padding: 2rem 0;
+}
+
+.partners-header {
+  position: relative;
+  margin-bottom: 1rem;
+
+  h2 {
+    font-size: $medium + 0.3rem;
+    font-weight: normal;
+    color: #fff;
+    margin: 0.8rem auto;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 0.1rem;
+    background: linear-gradient(to right, $last-color, $primary-color);
+  }
+}
+
+.partner {
+  width: auto;
+  height: auto;
+}
+
+.list-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  li {
+    padding: 0.5rem;
+    width: 6rem;
+  }
+
+  @include breakpoint-up(small) {
+    flex-wrap: nowrap;
+
+    li {
+      width: 10rem;
+    }
+  }
+}

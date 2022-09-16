@@ -1,0 +1,8 @@
+@use "../abstract" as *;
+
+.container-all {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  overflow-x: hidden;
+}
