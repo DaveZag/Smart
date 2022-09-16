@@ -15,11 +15,6 @@
 
 [**See Project 🚀**](https://davezag.github.io/Smart-Online-school-capstone-project/)
 
-<!-- 
-## Video Demonstration
-
-[**Watch**](https://) -->
-
 ## Screenshots
 
 ![Desktop Design](./preview/screenshot-127.0.0.1_5500-2022.09.15-16_47_38.png)
@@ -74,7 +69,7 @@ Give a ⭐️ if you like this project!
 
 ## Credit
 - All credits to
-<a href="https://www.behance.net/adagio07" rel="noopener" target="_blank"><strong>Cindy Shin</strong></a>  for creating the template from witch I took inspiration.
+<a href="https://www.behance.net/adagio07" rel="noopener" target="_blank"><strong>Cindy Shin</strong></a>  for creating the template from which I took inspiration.This project is a mockup of Cindy's design template.
 - The images used in this project are from [Pexels](https://www.pexels.com/collections/computers-hoxyyjd/) and [Unsplash](https://unsplash.com/s/photos/random-people).
 
 ## 📝 License
