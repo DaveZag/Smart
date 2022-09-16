@@ -99,13 +99,14 @@
 .logo-about {
   background-color: #fff;
   padding-block: 4rem 2rem;
+  min-height: 80vh;
 }
 
 .logo-header {
   position: relative;
   margin-bottom: 2rem;
 
-  h1 {
+  h2 {
     font-size: $medium;
   }
 
@@ -159,7 +160,7 @@
 }
 
 .past {
-  padding-block: 3rem 2rem;
+  padding-block: 5rem 5rem;
   background-color: #fff;
 
   h1 {

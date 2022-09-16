@@ -57,7 +57,7 @@ h1 {
 .limit {
   padding-inline: 1rem;
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .limit {
     padding-inline: 10%;
   }
@@ -87,12 +87,16 @@ h1 {
   justify-content: space-between;
 }
 
+.active {
+  color: #ec5242 !important;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 100%;
   gap: 0.5rem;
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -175,7 +179,7 @@ h1 {
 .menu-active {
   transform: translateX(0);
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .menu {
     position: static;
     display: flex;
@@ -204,10 +208,18 @@ h1 {
   }
 }
 
+.logo {
+  display: none;
+}
 .logo img {
   width: 4rem;
   height: 4rem;
   margin-left: -1rem;
+}
+@media (min-width: 48rem) {
+  .logo {
+    display: flex;
+  }
 }
 
 .logo a {
@@ -223,7 +235,7 @@ h1 {
   color: rgb(27, 26, 26);
 }
 
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .contact {
     border: 0.3125rem solid #ec5242;
     padding: 0.5rem 1.5rem;
@@ -283,7 +295,7 @@ h1 {
   transform: rotate(-45deg) translate(5px, -3px);
   background-color: white;
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .btn-container {
     display: none;
   }
@@ -360,7 +372,7 @@ h1 {
     bottom: 2rem;
   }
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .hero {
     background: url("../app/assets/patt.svg"), linear-gradient(190deg, rgba(3, 3, 3, 0.8), rgba(3, 3, 3, 0.8) 50%, rgba(153, 152, 152, 0.39)), url("../app/assets/checkbox.svg"), url("../app/assets/background.webp");
     background-attachment: fixed;
@@ -399,15 +411,16 @@ h1 {
   color: #fff;
   font-weight: normal;
 }
-.program h1 {
+.program h2 {
   font-size: 1.5rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: #fff;
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .program {
     text-align: center;
+    min-height: 100vh;
   }
 }
 
@@ -425,12 +438,17 @@ h1 {
   height: 0.1rem;
   background: linear-gradient(to right, #ec5242, #d3d3d3);
 }
+@media (min-width: 48rem) {
+  .program-header {
+    margin-bottom: 3rem;
+  }
+}
 
 .program-cards {
   gap: 1rem;
   width: 100%;
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .program-cards {
     flex-direction: row;
     gap: 1.5rem;
@@ -441,7 +459,7 @@ h1 {
   color: #fff;
   font-size: 2rem;
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .icon i {
     font-size: 3rem;
   }
@@ -457,11 +475,11 @@ h1 {
   gap: 0.6rem;
   padding: 0.6rem;
 }
-.prograrm-card h2 {
+.prograrm-card h3 {
   color: #ec5242;
   font-size: 1.1rem;
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .prograrm-card {
     flex-direction: column;
     gap: 0.5rem;
@@ -482,13 +500,62 @@ h1 {
 .programBtn {
   margin-top: 1.5rem;
 }
+@media (min-width: 48rem) {
+  .programBtn {
+    display: none;
+  }
+}
+
+.seeAll {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .seeAll {
+    font-size: 1.2rem;
+    display: block;
+    margin-top: 5rem;
+    color: #fff;
+    position: relative;
+    transition: all 100ms ease-in-out;
+  }
+  .seeAll::after {
+    content: "";
+    position: absolute;
+    bottom: -0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 0.1rem;
+    background-color: #fff;
+  }
+  .seeAll:hover {
+    color: #ec5242;
+  }
+  .seeAll:hover::after {
+    background-color: #ec5242;
+  }
+}
 
 /* .............. Team Section............... */
+@media (min-width: 48rem) {
+  .team-container {
+    padding-top: 3.5rem;
+  }
+}
+
 .team {
   background-color: #fff;
   margin-top: 2rem;
-  min-height: 50vh;
+  max-height: 69.5vh;
   padding-bottom: 3rem;
+  overflow: hidden;
+  transition: max-height 100ms ease-in;
+}
+@media (min-width: 48rem) {
+  .team {
+    max-height: none !important;
+    height: auto !important;
+  }
 }
 
 .team-header {
@@ -516,7 +583,10 @@ h1 {
   padding: 0.3rem;
   margin-block: 1rem;
 }
-@media (min-width: 42rem) {
+.card-active .card:nth-last-child(-n+3) {
+  background-color: red;
+}
+@media (min-width: 48rem) {
   .card {
     margin-block: 2rem;
   }
@@ -543,7 +613,7 @@ h1 {
   background-size: contain;
   transform: rotate(45deg);
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .image-container::after {
     top: -2.5rem;
     left: -2.5em;
@@ -580,6 +650,37 @@ h1 {
   margin: 0.5rem 0;
 }
 
+.hideBtn {
+  padding: 0.5rem 4rem;
+  margin: 0 auto 2rem;
+  background-color: #fff;
+  border: none;
+  outline: 1px solid #272a31;
+  position: relative;
+}
+.hideBtn::after {
+  content: ">";
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  font-size: 1.5rem;
+  transform: var(--transform, translateY(-50%) rotate(90deg));
+  color: #ec5242;
+}
+.hideBtn:active {
+  background-color: #ec5242;
+  color: #fff !important;
+  cursor: pointer;
+}
+.hideBtn:active::after {
+  color: #fff;
+}
+@media (min-width: 48rem) {
+  .hideBtn {
+    display: none;
+  }
+}
+
 /* ............. Partners Section ............... */
 .partners {
   background-color: #272a31;
@@ -588,12 +689,13 @@ h1 {
 
 .partners-header {
   position: relative;
+  margin-bottom: 1rem;
 }
-.partners-header h1 {
+.partners-header h2 {
   font-size: 1.8rem;
   font-weight: normal;
   color: #fff;
-  margin: 1rem auto;
+  margin: 0.8rem auto;
 }
 .partners-header::after {
   content: "";
@@ -620,7 +722,7 @@ h1 {
   padding: 0.5rem;
   width: 6rem;
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .list-grid {
     flex-wrap: nowrap;
   }
@@ -658,7 +760,7 @@ h1 {
   font-family: "Cocogoose", sans-serif;
   font-weight: 500;
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .hero-about {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)), url(../app/assets/Ellipse.svg), url(../app/assets/Ellipse.svg), url(../app/assets/patt.svg), url(../app/assets/rpi_vector.svg), url(../app/assets/checkbox.svg);
     background-repeat: no-repeat;
@@ -703,7 +805,7 @@ h1 {
   height: 0.1rem;
   background-color: #0f0f0f;
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .about-desc .first {
     width: 70%;
     margin: 0 auto;
@@ -717,13 +819,14 @@ h1 {
 .logo-about {
   background-color: #fff;
   padding-block: 4rem 2rem;
+  min-height: 80vh;
 }
 
 .logo-header {
   position: relative;
   margin-bottom: 2rem;
 }
-.logo-header h1 {
+.logo-header h2 {
   font-size: 1.5rem;
 }
 .logo-header::after {
@@ -755,7 +858,7 @@ h1 {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .logo-img img {
     width: 100%;
     height: 18rem;
@@ -771,7 +874,7 @@ h1 {
 }
 
 .past {
-  padding-block: 3rem 2rem;
+  padding-block: 5rem 5rem;
   background-color: #fff;
 }
 .past h1 {
@@ -811,7 +914,7 @@ h1 {
   height: 10rem;
   width: 100%;
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .past-img {
     flex-direction: row;
     height: 20rem;
@@ -851,7 +954,7 @@ h1 {
   background-color: #272a31 !important;
   color: #fff;
 }
-@media (min-width: 42rem) {
+@media (min-width: 48rem) {
   .footer {
     background-color: #d3d3d3;
     height: 21vh;

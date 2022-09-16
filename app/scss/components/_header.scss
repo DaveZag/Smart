@@ -89,10 +89,16 @@
 }
 
 .logo {
+  display: none;
+
   img {
     width: 4rem;
     height: 4rem;
     margin-left: -1rem;
+  }
+
+  @include breakpoint-up(small) {
+    display: flex;
   }
 }
 

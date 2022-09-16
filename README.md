@@ -73,8 +73,9 @@ Give a ⭐️ if you like this project!
 - [Microverse](https://github.com/microverseinc)
 
 ## Credit
-All credits to
+- All credits to
 <a href="https://www.behance.net/adagio07" rel="noopener" target="_blank"><strong>Cindy Shin</strong></a>  for creating the template from witch I took inspiration.
+- The images used in this project are from [Pexels](https://www.pexels.com/collections/computers-hoxyyjd/) and [Unsplash](https://unsplash.com/s/photos/random-people).
 
 ## 📝 License
 

@@ -109,3 +109,21 @@ function person(count) {
 for (let count = 0; count <= members.length - 1; count += 1) {
   person(count);
 }
+
+const hideBtn = document.querySelector('.hideBtn');
+const team = document.querySelector('.team');
+let active = false;
+
+hideBtn.addEventListener('click', () => {
+  if (!active) {
+    team.style.maxHeight = '100%';
+    hideBtn.innerText = 'Show Less';
+    hideBtn.style.setProperty('--transform', 'translateY(-50%) rotate(-90deg)');
+    active = true;
+  } else {
+    team.style.maxHeight = '69.5vh';
+    hideBtn.innerText = 'Show More';
+    hideBtn.style.setProperty('--transform', 'translateY(-50%) rotate(90deg)');
+    active = false;
+  }
+});

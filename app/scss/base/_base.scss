@@ -37,3 +37,7 @@
     justify-content: space-between;
   }
 }
+
+.active {
+  color: $last-color !important;
+}
