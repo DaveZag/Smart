@@ -657,6 +657,7 @@ h1 {
   border: none;
   outline: 1px solid #272a31;
   position: relative;
+  z-index: 23;
 }
 .hideBtn::after {
   content: ">";

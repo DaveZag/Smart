@@ -16,7 +16,6 @@
   padding-bottom: 3rem;
   overflow: hidden;
   transition: max-height 100ms ease-in;
-
   @include breakpoint-up(small) {
     max-height: none !important;
     height: auto !important;
@@ -127,6 +126,7 @@
   border: none;
   outline: 1px solid $secondary-color;
   position: relative;
+  z-index: 23;
 
   &::after {
     content: ">";
