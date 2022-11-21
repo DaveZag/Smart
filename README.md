@@ -1,7 +1,7 @@
 
 # Project Name: Smart Online Coding School
 
->**Smart is a platform that provides student from all around the world an opportunity to learn coding without having to worry distance, Fees and other hinders that can easily be found in tradition school systems.(This is A capstone project done at Microverse).**
+>**Smart is a platform that provides students from all around the world an opportunity to learn coding without having to worry about distance, Fees, and other hindrances that can easily be found in traditional school systems(This is A capstone project done at Microverse).**
 
 ## Built With
 
