@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-[**See Project 🚀**](https://davezag.github.io/Smart-Online-school-capstone-project/)
+[**See Project 🚀**](https://davezag.github.io/Smart)
 
 ## Screenshots
 
