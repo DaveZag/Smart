@@ -108,7 +108,6 @@ h1 {
   color: #fff;
   padding: 1rem 2rem;
   background-color: #ec5242;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-weight: 700;
@@ -133,10 +132,36 @@ h1 {
 /* ........... Header ............ */
 .header-top {
   width: 100%;
-  height: 4rem;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: white;
   position: fixed;
   z-index: 99;
+}
+
+.header-block {
+  padding-block: 0.5rem;
+}
+
+.socials-menu {
+  background-color: #272a31;
+  justify-content: flex-end;
+  padding-block: 0.2rem;
+}
+.socials-menu .control {
+  margin: 0 0.5rem;
+  color: white;
+}
+.socials-menu .control:hover {
+  color: #ec5242;
+  transition: color 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -ms-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+}
+.socials-menu i.control {
+  font-size: 1.1rem;
 }
 
 .menu {
@@ -188,13 +213,14 @@ h1 {
     width: 70%;
     height: auto;
     background: none;
+    justify-content: flex-end;
   }
   .menu::after {
     display: none;
   }
   .menu .nav-links {
     flex-direction: row;
-    gap: 4vw;
+    gap: 1.9rem;
   }
   .menu .nav-link {
     font-size: 1rem;
@@ -245,7 +271,6 @@ h1 {
 }
 
 .btn-container {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 37%;
@@ -331,7 +356,6 @@ h1 {
   font-size: 1.5rem;
   color: #d3d3d3;
   outline: 1px solid #fff;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -347,19 +371,7 @@ h1 {
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  -webkit-animation: arrow-move 2s ease-in-out 4;
-          animation: arrow-move 2s ease-in-out 4;
-}
-@-webkit-keyframes arrow-move {
-  from {
-    bottom: 2rem;
-  }
-  50% {
-    bottom: 0.3rem;
-  }
-  to {
-    bottom: 2rem;
-  }
+  animation: arrow-move 2s ease-in-out 4;
 }
 @keyframes arrow-move {
   from {
@@ -595,7 +607,6 @@ h1 {
 .image-container {
   display: flex;
   justify-content: center;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   align-items: flex-start;
@@ -608,7 +619,7 @@ h1 {
   left: -2rem;
   width: 8rem;
   height: 8rem;
-  background-image: url("../../app/assets/checkbox.svg");
+  background-image: url("../app/assets/checkbox.svg");
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(45deg);
@@ -812,7 +823,7 @@ h1 {
     margin: 0 auto;
   }
   .about-desc .first,
-.about-desc .second {
+  .about-desc .second {
     font-size: 1.2rem;
   }
 }
@@ -921,14 +932,14 @@ h1 {
     height: 20rem;
   }
   .past-img .image-one,
-.past-img .image-two {
+  .past-img .image-two {
     height: 100%;
     transition: all 300ms ease-in-out;
     box-shadow: 4px 3px 10px rgba(0, 0, 0, 0.231);
     border-radius: 2px;
   }
   .past-img .image-one:hover,
-.past-img .image-two:hover {
+  .past-img .image-two:hover {
     transform: scale(1.04);
     cursor: pointer;
   }

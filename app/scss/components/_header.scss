@@ -5,10 +5,38 @@
 
 .header-top {
   width: 100%;
-  height: 4rem;
+  height: fit-content;
   background-color: lighten($primary-color, 100%);
   position: fixed;
   z-index: 99;
+}
+
+.header-block {
+  padding-block: 0.5rem;
+}
+
+.socials-menu {
+  background-color: $secondary-color;
+  justify-content: flex-end;
+  padding-block: 0.2rem;
+
+  .control {
+    margin: 0 0.5rem;
+    color: white;
+
+    &:hover {
+      color: $last-color;
+      transition: color 0.3s ease-in-out;
+      -webkit-transition: color 0.3s ease-in-out;
+      -moz-transition: color 0.3s ease-in-out;
+      -ms-transition: color 0.3s ease-in-out;
+      -o-transition: color 0.3s ease-in-out;
+    }
+  }
+
+  i.control {
+    font-size: 1.1rem;
+  }
 }
 
 .menu {
@@ -63,6 +91,7 @@
     width: 70%;
     height: auto;
     background: none;
+    justify-content: flex-end;
 
     &::after {
       display: none;
@@ -70,7 +99,7 @@
 
     .nav-links {
       flex-direction: row;
-      gap: 4vw;
+      gap: 1.9rem;
     }
 
     .nav-link {
