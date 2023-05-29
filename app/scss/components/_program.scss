@@ -11,14 +11,14 @@
 
   h2 {
     font-size: $medium;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     color: #fff;
   }
 
   @include breakpoint-up(small) {
     text-align: center;
-    min-height: 100vh;
+    min-height: 79vh;
   }
 }
 
@@ -43,12 +43,12 @@
 }
 
 .program-cards {
-  gap: 1rem;
+  gap: 0.7rem;
   width: 100%;
 
   @include breakpoint-up(small) {
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 0.3rem;
   }
 }
 
@@ -63,7 +63,7 @@
   }
 }
 
-.prograrm-card {
+.program-card {
   width: 100%;
   background-color: rgba($primary-color, 0.1);
   backdrop-filter: blur(rem(2));
@@ -75,24 +75,35 @@
   h3 {
     color: $last-color;
     font-size: $small + 0.2rem;
+    width: 40%;
   }
 
   @include breakpoint-up(small) {
     flex-direction: column;
     gap: 0.5rem;
+    justify-content: unset;
+    padding: 1.1rem 0;
 
     &:hover {
       outline: 1px solid #fff;
+    }
+
+    h3 {
+      width: unset;
     }
   }
 }
 
 .text {
-  width: 90%;
+  width: 60%;
 
   li {
     color: #fff;
     align-self: flex-end;
+  }
+
+  @include breakpoint-up(small) {
+    width: 90%;
   }
 }
 
