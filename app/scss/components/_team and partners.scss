@@ -12,10 +12,8 @@
 .team {
   background-color: #fff;
   margin-top: 2rem;
-  max-height: 69.5vh;
   padding-bottom: 3rem;
   overflow: hidden;
-  transition: max-height 100ms ease-in;
   @include breakpoint-up(small) {
     max-height: none !important;
     height: auto !important;

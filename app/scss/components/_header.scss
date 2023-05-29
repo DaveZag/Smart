@@ -5,20 +5,28 @@
 
 .header-top {
   width: 100%;
-  height: fit-content;
-  background-color: lighten($primary-color, 100%);
   position: fixed;
   z-index: 99;
+  // background-color: #d2d2d2;
+
+  @include breakpoint-up(small) {
+    background-color: lighten($primary-color, 100%);
+  }
 }
 
 .header-block {
-  padding-block: 0.5rem;
+  padding-block: 1rem;
+
+  @include breakpoint-up(small) {
+    padding-block: 0.5rem;
+  }
 }
 
 .socials-menu {
   background-color: $secondary-color;
   justify-content: flex-end;
   padding-block: 0.2rem;
+  display: none;
 
   .control {
     margin: 0 0.5rem;
@@ -36,6 +44,10 @@
 
   i.control {
     font-size: 1.1rem;
+  }
+
+  @include breakpoint-up(small) {
+    display: flex;
   }
 }
 
@@ -157,8 +169,8 @@
 
 .btn-container {
   width: fit-content;
-  height: 37%;
   z-index: 999;
+  height: 3rem;
 
   &:hover {
     cursor: pointer;
@@ -166,18 +178,18 @@
 
   .menu-btn {
     position: relative;
-    width: 1.2rem;
-    height: 0.2rem;
+    width: 2rem;
+    height: 0.35rem;
     background-color: $secondary-color;
     transition: all 500ms ease-in-out;
 
     &::before {
       content: "";
       position: absolute;
-      top: -0.35rem;
+      top: -0.8rem;
       left: 0;
-      width: 1.2rem;
-      height: 0.2rem;
+      width: 2rem;
+      height: 0.35rem;
       background-color: $secondary-color;
       transition: all 600ms ease-in-out;
     }
@@ -185,28 +197,35 @@
     &::after {
       content: "";
       position: absolute;
-      top: 0.35rem;
+      top: 0.8rem;
       left: 0;
-      width: 1.2rem;
-      height: 0.2rem;
+      width: 2rem;
+      height: 0.35rem;
       background-color: $secondary-color;
       transition: all 600ms ease-in-out;
     }
 
     &-active {
       background-color: transparent;
-      right: 0.5rem;
       transform: rotate(360deg);
       transition: all 500ms ease-in-out;
 
       &::before {
-        transform: rotate(45deg) translate(5px, 3px);
+        transform: rotate(45deg) translate(10px, 5px);
         background-color: lighten($secondary-color, 100%);
+        -webkit-transform: rotate(45deg) translate(10px, 5px);
+        -moz-transform: rotate(45deg) translate(10px, 5px);
+        -ms-transform: rotate(45deg) translate(10px, 5px);
+        -o-transform: rotate(45deg) translate(10px, 5px);
       }
 
       &::after {
-        transform: rotate(-45deg) translate(5px, -3px);
+        transform: rotate(-45deg) translate(13px, -8px);
         background-color: lighten($secondary-color, 100%);
+        -webkit-transform: rotate(-45deg) translate(13px, -8px);
+        -moz-transform: rotate(-45deg) translate(13px, -8px);
+        -ms-transform: rotate(-45deg) translate(13px, -8px);
+        -o-transform: rotate(-45deg) translate(13px, -8px);
       }
     }
   }

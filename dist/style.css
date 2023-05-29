@@ -63,6 +63,10 @@ h1 {
   }
 }
 
+.hidden {
+  display: none !important;
+}
+
 .span {
   color: #ec5242;
 }
@@ -132,21 +136,29 @@ h1 {
 /* ........... Header ............ */
 .header-top {
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: white;
   position: fixed;
   z-index: 99;
 }
+@media (min-width: 48rem) {
+  .header-top {
+    background-color: white;
+  }
+}
 
 .header-block {
-  padding-block: 0.5rem;
+  padding-block: 1rem;
+}
+@media (min-width: 48rem) {
+  .header-block {
+    padding-block: 0.5rem;
+  }
 }
 
 .socials-menu {
   background-color: #272a31;
   justify-content: flex-end;
   padding-block: 0.2rem;
+  display: none;
 }
 .socials-menu .control {
   margin: 0 0.5rem;
@@ -162,6 +174,11 @@ h1 {
 }
 .socials-menu i.control {
   font-size: 1.1rem;
+}
+@media (min-width: 48rem) {
+  .socials-menu {
+    display: flex;
+  }
 }
 
 .menu {
@@ -273,52 +290,59 @@ h1 {
 .btn-container {
   width: -moz-fit-content;
   width: fit-content;
-  height: 37%;
   z-index: 999;
+  height: 3rem;
 }
 .btn-container:hover {
   cursor: pointer;
 }
 .btn-container .menu-btn {
   position: relative;
-  width: 1.2rem;
-  height: 0.2rem;
+  width: 2rem;
+  height: 0.35rem;
   background-color: #272a31;
   transition: all 500ms ease-in-out;
 }
 .btn-container .menu-btn::before {
   content: "";
   position: absolute;
-  top: -0.35rem;
+  top: -0.8rem;
   left: 0;
-  width: 1.2rem;
-  height: 0.2rem;
+  width: 2rem;
+  height: 0.35rem;
   background-color: #272a31;
   transition: all 600ms ease-in-out;
 }
 .btn-container .menu-btn::after {
   content: "";
   position: absolute;
-  top: 0.35rem;
+  top: 0.8rem;
   left: 0;
-  width: 1.2rem;
-  height: 0.2rem;
+  width: 2rem;
+  height: 0.35rem;
   background-color: #272a31;
   transition: all 600ms ease-in-out;
 }
 .btn-container .menu-btn-active {
   background-color: transparent;
-  right: 0.5rem;
   transform: rotate(360deg);
   transition: all 500ms ease-in-out;
 }
 .btn-container .menu-btn-active::before {
-  transform: rotate(45deg) translate(5px, 3px);
+  transform: rotate(45deg) translate(10px, 5px);
   background-color: white;
+  -webkit-transform: rotate(45deg) translate(10px, 5px);
+  -moz-transform: rotate(45deg) translate(10px, 5px);
+  -ms-transform: rotate(45deg) translate(10px, 5px);
+  -o-transform: rotate(45deg) translate(10px, 5px);
 }
 .btn-container .menu-btn-active::after {
-  transform: rotate(-45deg) translate(5px, -3px);
+  transform: rotate(-45deg) translate(13px, -8px);
   background-color: white;
+  -webkit-transform: rotate(-45deg) translate(13px, -8px);
+  -moz-transform: rotate(-45deg) translate(13px, -8px);
+  -ms-transform: rotate(-45deg) translate(13px, -8px);
+  -o-transform: rotate(-45deg) translate(13px, -8px);
 }
 @media (min-width: 48rem) {
   .btn-container {
@@ -328,7 +352,7 @@ h1 {
 
 /* ................. Hero section ................. */
 .hero {
-  background: url("../app/assets/patt.svg"), linear-gradient(190deg, rgba(3, 3, 3, 0.8), rgba(3, 3, 3, 0.8) 50%, rgba(255, 255, 255, 0.39)), url("../app/assets/checkbox.svg"), url("../app/assets/background.webp");
+  background: url("../app/assets/patt.svg"), linear-gradient(0.41turn, rgba(254, 251, 251, 0.55) 5%, rgba(3, 3, 3, 0.8) 30%, rgba(3, 3, 3, 0.5) 100%), url("../app/assets/checkbox.svg"), url("../app/assets/background.webp");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 5rem, cover, 50%, cover;
   background-position: left 3% bottom 3rem, center, right 10% center, center;
@@ -372,6 +396,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   animation: arrow-move 2s ease-in-out 4;
+  display: none;
 }
 @keyframes arrow-move {
   from {
@@ -386,6 +411,7 @@ h1 {
 }
 @media (min-width: 48rem) {
   .hero {
+    height: 100vh;
     background: url("../app/assets/patt.svg"), linear-gradient(190deg, rgba(3, 3, 3, 0.8), rgba(3, 3, 3, 0.8) 50%, rgba(153, 152, 152, 0.39)), url("../app/assets/checkbox.svg"), url("../app/assets/background.webp");
     background-attachment: fixed;
     background-repeat: no-repeat, no-repeat, no-repeat;
@@ -412,6 +438,9 @@ h1 {
     width: auto;
     display: inherit;
     gap: 1rem;
+  }
+  .hero .arrow {
+    display: block;
   }
 }
 
@@ -558,10 +587,8 @@ h1 {
 .team {
   background-color: #fff;
   margin-top: 2rem;
-  max-height: 69.5vh;
   padding-bottom: 3rem;
   overflow: hidden;
-  transition: max-height 100ms ease-in;
 }
 @media (min-width: 48rem) {
   .team {
@@ -747,15 +774,14 @@ h1 {
 .container-about {
   background-color: #d3d3d3;
   width: 100%;
-  min-height: 100vh;
+  min-height: 50vh;
   text-align: center;
 }
 
 .hero-about {
   text-align: center;
-  padding-top: 9.5rem;
+  padding-top: 15rem;
   padding-bottom: 2rem;
-  min-height: 100vh;
   background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1)), url(../app/assets/Ellipse.svg), url(../app/assets/Ellipse.svg), url(../app/assets/patt.svg);
   background-repeat: no-repeat;
   background-position: center, bottom 58% left, right top 85%, top 28% right;
@@ -774,6 +800,8 @@ h1 {
 }
 @media (min-width: 48rem) {
   .hero-about {
+    height: 100vh;
+    padding-top: 9.7rem;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)), url(../app/assets/Ellipse.svg), url(../app/assets/Ellipse.svg), url(../app/assets/patt.svg), url(../app/assets/rpi_vector.svg), url(../app/assets/checkbox.svg);
     background-repeat: no-repeat;
     background-position: center, bottom 58% left 9rem, right 18rem top 78%, top 28% right 90rem, top 20% center, top 80% center;
@@ -831,7 +859,7 @@ h1 {
 .logo-about {
   background-color: #fff;
   padding-block: 4rem 2rem;
-  min-height: 80vh;
+  min-height: 50vh;
 }
 
 .logo-header {
