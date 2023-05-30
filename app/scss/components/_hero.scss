@@ -2,14 +2,16 @@
 
 /* ................. Hero section ................. */
 .hero {
-  background: url("../app/assets/patt.svg"),
+  background:
+    url("../app/assets/patt.svg"),
     linear-gradient(
       0.41turn,
       rgba(254, 251, 251, 0.55) 5%,
       rgba(3, 3, 3, 0.8) 30%,
       rgba(3, 3, 3, 0.5) 100%
     ),
-    url("../app/assets/checkbox.svg"), url("../app/assets/background.webp");
+    url("../app/assets/checkbox.svg"),
+    url("../app/assets/background.webp");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 5rem, cover, 50%, cover;
   background-position: left 3% bottom 3rem, center, right 10% center, center;
@@ -76,14 +78,16 @@
 
   @include breakpoint-up(small) {
     height: 100vh;
-    background: url("../app/assets/patt.svg"),
+    background:
+      url("../app/assets/patt.svg"),
       linear-gradient(
         190deg,
         rgba(3, 3, 3, 0.8),
         rgba(3, 3, 3, 0.8) 50%,
         rgba(153, 152, 152, 0.39)
       ),
-      url("../app/assets/checkbox.svg"), url("../app/assets/background.webp");
+      url("../app/assets/checkbox.svg"),
+      url("../app/assets/background.webp");
     background-attachment: fixed;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 5rem, cover, 50%, cover;

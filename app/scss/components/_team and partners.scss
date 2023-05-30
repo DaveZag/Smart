@@ -14,6 +14,7 @@
   margin-top: 2rem;
   padding-bottom: 3rem;
   overflow: hidden;
+
   @include breakpoint-up(small) {
     max-height: none !important;
     height: auto !important;
