@@ -79,6 +79,8 @@ const members = [
   },
 ];
 
+const mediaQuery = window.matchMedia('(max-width: 768px)');
+
 function person(count) {
   const card = document.createElement('div');
   card.className = `${cardClasses[0]}`;
@@ -97,6 +99,18 @@ function person(count) {
   const description = document.createElement('div');
   description.classList.add(`${cardClasses[2]}`);
 
+  const hiddenElements = (e) => {
+    if (count >= 2 && e.matches) {
+      card.classList.add('hidden');
+      card.setAttribute('data-hide', 'true');
+    } else {
+      card.classList.remove('hidden');
+    }
+  };
+
+  mediaQuery.addEventListener('change', (e) => hiddenElements(e));
+  hiddenElements(mediaQuery);
+
   description.innerHTML = `
     <h3>${members[count].name}</h3>
     <span> ${members[count].title}</span>
@@ -111,19 +125,22 @@ for (let count = 0; count <= members.length - 1; count += 1) {
 }
 
 const hideBtn = document.querySelector('.hideBtn');
-const team = document.querySelector('.team');
+const allCards = document.querySelectorAll('.card');
 let active = false;
 
 hideBtn.addEventListener('click', () => {
   if (!active) {
-    team.style.maxHeight = '100%';
     hideBtn.innerText = 'Show Less';
     hideBtn.style.setProperty('--transform', 'translateY(-50%) rotate(-90deg)');
     active = true;
   } else {
-    team.style.maxHeight = '69.5vh';
     hideBtn.innerText = 'Show More';
     hideBtn.style.setProperty('--transform', 'translateY(-50%) rotate(90deg)');
     active = false;
   }
+  allCards.forEach((card) => {
+    if (card.hasAttribute('data-hide')) {
+      card.classList.toggle('hidden');
+    }
+  });
 });

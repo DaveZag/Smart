@@ -12,10 +12,9 @@
 .team {
   background-color: #fff;
   margin-top: 2rem;
-  max-height: 69.5vh;
   padding-bottom: 3rem;
   overflow: hidden;
-  transition: max-height 100ms ease-in;
+
   @include breakpoint-up(small) {
     max-height: none !important;
     height: auto !important;
@@ -74,7 +73,7 @@
     left: -2rem;
     width: 8rem;
     height: 8rem;
-    background-image: url("../../app/assets/checkbox.svg");
+    background-image: url("../app/assets/checkbox.svg");
     background-repeat: no-repeat;
     background-size: contain;
     transform: rotate(45deg);

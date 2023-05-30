@@ -63,6 +63,10 @@ h1 {
   }
 }
 
+.hidden {
+  display: none !important;
+}
+
 .span {
   color: #ec5242;
 }
@@ -108,7 +112,6 @@ h1 {
   color: #fff;
   padding: 1rem 2rem;
   background-color: #ec5242;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-weight: 700;
@@ -133,10 +136,49 @@ h1 {
 /* ........... Header ............ */
 .header-top {
   width: 100%;
-  height: 4rem;
-  background-color: white;
   position: fixed;
   z-index: 99;
+}
+@media (min-width: 48rem) {
+  .header-top {
+    background-color: white;
+  }
+}
+
+.header-block {
+  padding-block: 1rem;
+}
+@media (min-width: 48rem) {
+  .header-block {
+    padding-block: 0.5rem;
+  }
+}
+
+.socials-menu {
+  background-color: #272a31;
+  justify-content: flex-end;
+  padding-block: 0.2rem;
+  display: none;
+}
+.socials-menu .control {
+  margin: 0 0.5rem;
+  color: white;
+}
+.socials-menu .control:hover {
+  color: #ec5242;
+  transition: color 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -ms-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+}
+.socials-menu i.control {
+  font-size: 1.1rem;
+}
+@media (min-width: 48rem) {
+  .socials-menu {
+    display: flex;
+  }
 }
 
 .menu {
@@ -188,13 +230,14 @@ h1 {
     width: 70%;
     height: auto;
     background: none;
+    justify-content: flex-end;
   }
   .menu::after {
     display: none;
   }
   .menu .nav-links {
     flex-direction: row;
-    gap: 4vw;
+    gap: 2.5rem;
   }
   .menu .nav-link {
     font-size: 1rem;
@@ -245,55 +288,61 @@ h1 {
 }
 
 .btn-container {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 37%;
   z-index: 999;
+  height: 3rem;
 }
 .btn-container:hover {
   cursor: pointer;
 }
 .btn-container .menu-btn {
   position: relative;
-  width: 1.2rem;
-  height: 0.2rem;
+  width: 2rem;
+  height: 0.35rem;
   background-color: #272a31;
   transition: all 500ms ease-in-out;
 }
 .btn-container .menu-btn::before {
   content: "";
   position: absolute;
-  top: -0.35rem;
+  top: -0.8rem;
   left: 0;
-  width: 1.2rem;
-  height: 0.2rem;
+  width: 2rem;
+  height: 0.35rem;
   background-color: #272a31;
   transition: all 600ms ease-in-out;
 }
 .btn-container .menu-btn::after {
   content: "";
   position: absolute;
-  top: 0.35rem;
+  top: 0.8rem;
   left: 0;
-  width: 1.2rem;
-  height: 0.2rem;
+  width: 2rem;
+  height: 0.35rem;
   background-color: #272a31;
   transition: all 600ms ease-in-out;
 }
 .btn-container .menu-btn-active {
   background-color: transparent;
-  right: 0.5rem;
   transform: rotate(360deg);
   transition: all 500ms ease-in-out;
 }
 .btn-container .menu-btn-active::before {
-  transform: rotate(45deg) translate(5px, 3px);
+  transform: rotate(45deg) translate(10px, 5px);
   background-color: white;
+  -webkit-transform: rotate(45deg) translate(10px, 5px);
+  -moz-transform: rotate(45deg) translate(10px, 5px);
+  -ms-transform: rotate(45deg) translate(10px, 5px);
+  -o-transform: rotate(45deg) translate(10px, 5px);
 }
 .btn-container .menu-btn-active::after {
-  transform: rotate(-45deg) translate(5px, -3px);
+  transform: rotate(-45deg) translate(13px, -8px);
   background-color: white;
+  -webkit-transform: rotate(-45deg) translate(13px, -8px);
+  -moz-transform: rotate(-45deg) translate(13px, -8px);
+  -ms-transform: rotate(-45deg) translate(13px, -8px);
+  -o-transform: rotate(-45deg) translate(13px, -8px);
 }
 @media (min-width: 48rem) {
   .btn-container {
@@ -303,7 +352,7 @@ h1 {
 
 /* ................. Hero section ................. */
 .hero {
-  background: url("../app/assets/patt.svg"), linear-gradient(190deg, rgba(3, 3, 3, 0.8), rgba(3, 3, 3, 0.8) 50%, rgba(255, 255, 255, 0.39)), url("../app/assets/checkbox.svg"), url("../app/assets/background.webp");
+  background: url("../app/assets/patt.svg"), linear-gradient(0.41turn, rgba(254, 251, 251, 0.55) 5%, rgba(3, 3, 3, 0.8) 30%, rgba(3, 3, 3, 0.5) 100%), url("../app/assets/checkbox.svg"), url("../app/assets/background.webp");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 5rem, cover, 50%, cover;
   background-position: left 3% bottom 3rem, center, right 10% center, center;
@@ -331,7 +380,6 @@ h1 {
   font-size: 1.5rem;
   color: #d3d3d3;
   outline: 1px solid #fff;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -347,19 +395,8 @@ h1 {
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  -webkit-animation: arrow-move 2s ease-in-out 4;
-          animation: arrow-move 2s ease-in-out 4;
-}
-@-webkit-keyframes arrow-move {
-  from {
-    bottom: 2rem;
-  }
-  50% {
-    bottom: 0.3rem;
-  }
-  to {
-    bottom: 2rem;
-  }
+  animation: arrow-move 2s ease-in-out 4;
+  display: none;
 }
 @keyframes arrow-move {
   from {
@@ -374,6 +411,7 @@ h1 {
 }
 @media (min-width: 48rem) {
   .hero {
+    height: 100vh;
     background: url("../app/assets/patt.svg"), linear-gradient(190deg, rgba(3, 3, 3, 0.8), rgba(3, 3, 3, 0.8) 50%, rgba(153, 152, 152, 0.39)), url("../app/assets/checkbox.svg"), url("../app/assets/background.webp");
     background-attachment: fixed;
     background-repeat: no-repeat, no-repeat, no-repeat;
@@ -401,6 +439,9 @@ h1 {
     display: inherit;
     gap: 1rem;
   }
+  .hero .arrow {
+    display: block;
+  }
 }
 
 /* ................ Program Section ................... */
@@ -413,14 +454,14 @@ h1 {
 }
 .program h2 {
   font-size: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   color: #fff;
 }
 @media (min-width: 48rem) {
   .program {
     text-align: center;
-    min-height: 100vh;
+    min-height: 79vh;
   }
 }
 
@@ -445,13 +486,13 @@ h1 {
 }
 
 .program-cards {
-  gap: 1rem;
+  gap: 0.7rem;
   width: 100%;
 }
 @media (min-width: 48rem) {
   .program-cards {
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 0.3rem;
   }
 }
 
@@ -465,7 +506,7 @@ h1 {
   }
 }
 
-.prograrm-card {
+.program-card {
   width: 100%;
   background-color: rgba(211, 211, 211, 0.1);
   -webkit-backdrop-filter: blur(rem(2));
@@ -475,26 +516,37 @@ h1 {
   gap: 0.6rem;
   padding: 0.6rem;
 }
-.prograrm-card h3 {
+.program-card h3 {
   color: #ec5242;
   font-size: 1.1rem;
+  width: 40%;
 }
 @media (min-width: 48rem) {
-  .prograrm-card {
+  .program-card {
     flex-direction: column;
     gap: 0.5rem;
+    justify-content: unset;
+    padding: 1.1rem 0;
   }
-  .prograrm-card:hover {
+  .program-card:hover {
     outline: 1px solid #fff;
+  }
+  .program-card h3 {
+    width: unset;
   }
 }
 
 .text {
-  width: 90%;
+  width: 60%;
 }
 .text li {
   color: #fff;
   align-self: flex-end;
+}
+@media (min-width: 48rem) {
+  .text {
+    width: 90%;
+  }
 }
 
 .programBtn {
@@ -546,10 +598,8 @@ h1 {
 .team {
   background-color: #fff;
   margin-top: 2rem;
-  max-height: 69.5vh;
   padding-bottom: 3rem;
   overflow: hidden;
-  transition: max-height 100ms ease-in;
 }
 @media (min-width: 48rem) {
   .team {
@@ -595,7 +645,6 @@ h1 {
 .image-container {
   display: flex;
   justify-content: center;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   align-items: flex-start;
@@ -608,7 +657,7 @@ h1 {
   left: -2rem;
   width: 8rem;
   height: 8rem;
-  background-image: url("../../app/assets/checkbox.svg");
+  background-image: url("../app/assets/checkbox.svg");
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(45deg);
@@ -736,15 +785,14 @@ h1 {
 .container-about {
   background-color: #d3d3d3;
   width: 100%;
-  min-height: 100vh;
+  min-height: 50vh;
   text-align: center;
 }
 
 .hero-about {
   text-align: center;
-  padding-top: 9.5rem;
+  padding-top: 15rem;
   padding-bottom: 2rem;
-  min-height: 100vh;
   background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1)), url(../app/assets/Ellipse.svg), url(../app/assets/Ellipse.svg), url(../app/assets/patt.svg);
   background-repeat: no-repeat;
   background-position: center, bottom 58% left, right top 85%, top 28% right;
@@ -763,6 +811,8 @@ h1 {
 }
 @media (min-width: 48rem) {
   .hero-about {
+    height: 100vh;
+    padding-top: 9.7rem;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)), url(../app/assets/Ellipse.svg), url(../app/assets/Ellipse.svg), url(../app/assets/patt.svg), url(../app/assets/rpi_vector.svg), url(../app/assets/checkbox.svg);
     background-repeat: no-repeat;
     background-position: center, bottom 58% left 9rem, right 18rem top 78%, top 28% right 90rem, top 20% center, top 80% center;
@@ -812,7 +862,7 @@ h1 {
     margin: 0 auto;
   }
   .about-desc .first,
-.about-desc .second {
+  .about-desc .second {
     font-size: 1.2rem;
   }
 }
@@ -820,7 +870,7 @@ h1 {
 .logo-about {
   background-color: #fff;
   padding-block: 4rem 2rem;
-  min-height: 80vh;
+  min-height: 50vh;
 }
 
 .logo-header {
@@ -921,14 +971,14 @@ h1 {
     height: 20rem;
   }
   .past-img .image-one,
-.past-img .image-two {
+  .past-img .image-two {
     height: 100%;
     transition: all 300ms ease-in-out;
     box-shadow: 4px 3px 10px rgba(0, 0, 0, 0.231);
     border-radius: 2px;
   }
   .past-img .image-one:hover,
-.past-img .image-two:hover {
+  .past-img .image-two:hover {
     transform: scale(1.04);
     cursor: pointer;
   }
